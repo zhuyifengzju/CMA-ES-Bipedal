@@ -95,7 +95,7 @@ def f(theta, render=False):
             if render is True and i==0:
                 env.render()
 
-            episode_reward += gamma * reward                
+            episode_reward = reward + gamma * episode_reward                
             cur_state = next_state
             steps += 1
 
